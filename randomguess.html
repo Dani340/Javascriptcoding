@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>randomguess</title>
+</head>
+<body>
+<script>
+let n = Math.round(Math.random() * 10)
+let guess 
+let final = false
+while(final === false) {
+	guess = prompt("What's the number?");
+	if(guess == n) {
+		final = true
+		alert("You're right!")
+	}
+	else if(guess > n) {
+		alert("It's smaller!")
+	}
+	else {
+		alert("It's bigger!")
+	}
+}
+</script>
+</body>
+</html>
