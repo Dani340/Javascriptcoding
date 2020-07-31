@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>letters</title>
+</head>
+<body>
+<script> 
+let repeat, letters = [];
+
+while(repeat !== 'n') {
+	letters.push(prompt('What letters do you want to add?'));
+	repeat = prompt('Would u like to add more? y/n');
+}
+let vocale = ['a', 'e', 'i', 'o', 'u']
+let difference = letters.filter(x => !vocale.includes(x));
+let letterspar = [],
+    lettersimpar = [];
+
+for (let i=0;i<letters.length;i++){
+    if ((i+2)%2==0) {
+        lettersimpar.push(letters[i]);
+    }
+    else {
+        letterspar.push(letters[i]);
+    }
+}
+
+let difference2 = difference.filter(x => !letterspar.includes(x));
+alert(difference2)
+</script>
+</body>
+</html>
