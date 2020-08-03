@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>choosing beetwen division or multiplication</title>
+	<button id="clickme">Multiplication</button>
+	<button id="clickyou">Division</button>
+</head>
+<body>
+<script>
+let button1 = document.getElementById("clickme")
+let button2 = document.getElementById("clickyou")
+let n1 = prompt("What's the first number?")
+let n2 = prompt("What's the second number?")
+let mul = n1 * n2
+let div = n1 / n2
+button1.onclick = function() {
+	alert("The multiplication of the numbers is: " + mul);
+}
+button2.onclick = function() {
+	alert("The division of the numbers is: " + div);
+}
+
+
+</script>
+</body>
+</html>
