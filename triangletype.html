@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>triangle type determinator</title>
+</head>
+<body>
+<script>
+function Calculate() {
+	const angle1 = document.getElementById('first');
+    const angle2 = document.getElementById('second');
+    const angle3 = document.getElementById('third');
+    const angle12 = parseInt(angle1.value);
+    const angle22 = parseInt(angle2.value);
+    const angle32 = parseInt(angle3.value);
+
+    if(angle12 + angle22 + angle32 !== 180 || angle12 >= 180 || angle22 >= 180 || angle32 >= 180 || angle12 <= 0 || angle22 <= 0 || angle32 <= 0) {
+    	alert("Triunghiul nu respecta normele!");
+    }
+    else if(angle12 === 90 || angle22 === 90 || angle32 === 90 && angle12 + angle22 + angle32 === 180) {
+    	alert("Triunghiul este dreptunghic!");
+    }
+    else if(angle12 < 90 && angle12 > 0 && angle22 < 90 && angle22 > 0 && angle32 < 90 && angle32 > 0 && angle12 + angle22 + angle32 == 180) {
+    	alert("Triunghiul este ascutitunghic!");
+    }
+    else if(angle12 > 90 && angle12 < 180 || angle22 > 90 && angle22 < 180 || angle32 > 90 && angle32 < 180 && angle12 + angle22 + angle32 == 180) {
+    	alert("Triunghiul este obtuz!");
+    }
+}
+
+</script>
+First angle <input type="number" id="first" />
+Second angle <input type="number" id="second" />
+Third angle <input type="number" id="third" />
+<button onclick="Calculate()">See your triangle type</button>
+</body>
+</html>
