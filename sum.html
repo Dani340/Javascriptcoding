@@ -5,16 +5,19 @@
 	<title>sum</title>
 </head>
 <body>
-	
-<script>
-let number = prompt("Choose yur number:");
-var sum = 0; 
-for (let i = 1; number > i; i++) {
-	sum = sum + i
-}
-
-
-alert("The sum is " + sum);
-</script>
+The number where the sum will stop - <input type="number" id="sum">
+<button onclick="calculate()">Calculate</button>
 </body>
+<script>
+function calculate(){
+	let number = document.getElementById('sum');
+	let number1 = parseInt(number.value);
+	let sum = 0; 
+	for (let i = 1; number1 > i; i++) {
+		sum = sum + i
+	}
+
+	alert("The sum is " + sum);
+}
+</script>
 </html>
