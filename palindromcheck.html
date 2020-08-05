@@ -4,27 +4,30 @@
 	<title>palindromcheck</title>
 </head>
 <body>
-	<script>
-let num = prompt("What's the number?")
-
-function reversedNum(num) {
-	return (
-    parseFloat(
-      num
-        .toString()
-        .split('')
-        .reverse()
-        .join('')
-    ) * Math.sign(num)
-  )
-}
-if(num == reversedNum(num)) {
-	alert("It's a palindrom!")
-}
-else {
-	alert("It's not a palindrom!")
-}
-
-	</script>
+Insert number - <input type="number" id="n1">
+<button onclick="palindrom()">Verify palindrom</button>
 </body>
+<script>
+function palindrom() {
+  let num = document.getElementById('n1');
+  let num1 = parseInt(num.value);
+  function reversedNum(num1) {
+    return (
+      parseFloat(
+        num1
+          .toString()
+          .split('')
+          .reverse()
+          .join('')
+      ) * Math.sign(num1)
+    )
+  }
+  if(num1 == reversedNum(num1)) {
+    alert("It's a palindrom!")
+  }
+  else {
+    alert("It's not a palindrom!")
+  }
+}
+</script>
 </html>
