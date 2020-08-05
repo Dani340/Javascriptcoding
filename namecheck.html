@@ -3,17 +3,22 @@
 <head>
 	<title>namecheck</title>
 </head>
+Last name <input type="name" id="lastn" />
+Name <input type="name" id="n" />
+<button onclick="verify()">Verify</button>
 <body>
 	<script>
-		let lastname = prompt("What's your last name?");
-		let name = prompt("What's your name?")
-		let numecomplet = name + " " + lastname;
-		if(name.charAt(0) == "D" || name.length > 5) {
-			alert("Welcome!")
-		}
-		else {
-			alert("Your name was not accepted in the data base, change it!")	
-		}
+function verify() {
+	let lastname = document.getElementById('lastn');
+    let name = document.getElementById('n');
+	let numecomplet = name + " " + lastname;
+	if(name.value.charAt(0) == "D" || name.value.length > 5) {
+		alert("Welcome!")
+	}
+	else {
+		alert("Your name was not accepted in the data base, change it!")	
+	}
+}
 	</script>
 </body>
 </html>
