@@ -4,20 +4,25 @@
 	<title>sumormultiplication</title>
 </head>
 <body>
-	<script>
-		let n1 = prompt("Tell me the first number:")
-		let n2 = prompt("Tell me the second number:")
-		let n1v2 = parseInt(n1, 10);
-		let n2v2 = parseInt(n2, 10);
-		sum = n1v2 + n2v2;
-		multiplication = n1v2 * n2v2;
-
-		if(multiplication >= 1000) {
-			alert(sum);
-		}
-		else {
-			alert(multiplication)
-		}
-	</script>
+First number - <input type="n1" id="n1">
+Second number - <input type="n2" id="n2">
+<button onclick="sum()">Calculate</button>
 </body>
+<script>
+function sum() {
+	let n1 = document.getElementById('n1');
+	let n2 = document.getElementById('n2');
+	let n1v2 = parseInt(n1.value);
+	let n2v2 = parseInt(n2.value);
+	sum = n1v2 + n2v2;
+	multiplication = n1v2 * n2v2;
+
+	if(multiplication >= 1000) {
+		alert(sum);
+	}
+	else {
+		alert(multiplication)
+	}
+}
+</script>
 </html>
