@@ -4,23 +4,26 @@
 	<title>rasturnat</title>
 </head>
 <body>
-	<script>
-
-let num = prompt("What's the number?")
-
-function reversedNum(num) {
-	return (
-    parseFloat(
-      num
-        .toString()
-        .split('')
-        .reverse()
-        .join('')
-    ) * Math.sign(num)
-  )
-}
-
-alert(reversedNum(num))
-	</script>
+Your number - <input type="number" id="num">
+<button onclick="rasturnat()">Turn it around</button>
 </body>
+<script>
+function rasturnat() {
+   let num = document.getElementById('num');
+   let num1 = parseInt(num.value);
+   function reversedNum(num1) {
+      return (
+         parseFloat(
+         num1
+            .toString()
+            .split('')
+            .reverse()
+            .join('')
+         ) * Math.sign(num1)
+      )
+   }
+
+   alert(reversedNum(num1))
+}
+  </script>
 </html>
