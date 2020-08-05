@@ -4,23 +4,40 @@
 	<title>randomguess</title>
 </head>
 <body>
+Guess - <input type="number" id="guess">
+<button onclick="verify()">Verify your guess</button>
+</body>
 <script>
-let n = Math.round(Math.random() * 10)
-let guess 
-let final = false
-while(final === false) {
-	guess = prompt("What's the number?");
+let n = Math.round(Math.random() * 10);
+let tries = 1;
+function verify() {
+	
+	let guess = document.getElementById('guess').value;
+
+
 	if(guess == n) {
-		final = true
-		alert("You're right!")
+		alert("You're right and did it in " + tries +"!");
+		if(tries == 1) {
+			alert("Perfect!")
+		}
+		else if(tries == 2 || tries == 3) {
+			alert("Good job!")
+		}
+		else if(tries == 5) {
+			alert("Ok perfomance...")
+		}
+		else {
+			alert("You can do better!")
+		}
 	}
 	else if(guess > n) {
-		alert("It's smaller!")
+		tries++;
+		alert("It's smaller!");
 	}
 	else {
-		alert("It's bigger!")
+		tries++;
+		alert("It's bigger!");
 	}
 }
 </script>
-</body>
 </html>
