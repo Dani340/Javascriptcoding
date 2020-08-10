@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>phone number checker</title>
+</head>
+<body>
+Your phone number - <input type="number" id="phone">
+<button onclick='number()'>Check phone number</button>
+</body>
+<script>
+function number() {
+	const number = document.getElementById('phone');
+	firstnumber = number.value.charAt(0);
+	secondnumber = number.value.charAt(1);
+	if(number.value.length === 10 && firstnumber === '0' && secondnumber === '7') {
+		alert("Number accepted!");
+	}
+	else {
+		alert("Number doesn't fit the norms, change it!");
+	}
+}
+</script>
+</html>
