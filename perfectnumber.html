@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>perfect number checker</title>
+</head>
+<body>
+Your number - <input type="number" id="perfect">
+<button onclick='calculate()'>Check if it's perfect</button>
+</body>
+<script>
+function calculate(){
+	const number = document.getElementById("perfect");
+ 	divs = [];
+ 	sum = 0
+	if(number.value > 1) {
+    	for(i = 0;i <= number.value / 2;i++){
+      		if(number.value % i === 0){
+      			sum = sum + i;
+     		}
+    	}
+  	}
+
+  	if(sum === parseInt(number.value)) {
+  		alert("It's a perfect number!")
+  	}
+  	else {
+  		alert("It's not a perfect number!")
+  	}
+}
+
+</script>
+</html>
