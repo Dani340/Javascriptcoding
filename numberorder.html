@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>number order</title>
+</head>
+<body>
+Your number - <input type="number" id="number">
+<button onclick='Calculate()'>Check order</button>
+</body>
+<script>
+function Calculate() {
+	const num = document.getElementById("number");
+	for (let i = 0; i < num.value.length - 1; i++) {
+    	if (parseInt(num.value[i]) >= parseInt(num.value[i + 1])) {
+    		alert("Not in order!");
+    	}
+    	else {
+    		alert("In order!");
+    	}
+	}   
+}
+
+</script>
+</html>
