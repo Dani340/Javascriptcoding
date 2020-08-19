@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>decimal and binary convert</title>
+
+</head>
+<body>
+<script>
+function convertdecimal() {
+        const input = (document.getElementById('decimal'));
+        const input1 = parseInt(input.value);
+        alert(input1 + " from decimal to binary is: " + input1.toString(2));
+}
+function convertbinar() {
+        const input = document.getElementById('binar');
+        const input1 = parseInt(input.value, 2);
+        alert(input1);
+}
+</script>
+Decimal number - <input type="number" id="decimal" />
+<button onclick="convertdecimal()">Convert decimal no. to binar no.</button>
+Binar number - <input type="number" id="binar"/>
+<button onclick="convertbinar()">Convert binar no. to decimal no.</button>
+</body>
+</html>
