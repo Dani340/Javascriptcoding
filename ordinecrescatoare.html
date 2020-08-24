@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ordine crescatoare</title>
+</head>
+<body>
+First no. - <input type="number" id="1">
+Second no. - <input type="number" id="2">
+Third no. - <input type="number" id="3">
+Fourth no. - <input type="number" id="4">
+Fifth no. - <input type="number" id="5">
+<button onclick='calculate()'>Sort the numbers</button>
+</body>
+<script>
+function calculate() {
+	let input1 = document.getElementById('1');
+	let input12 = parseInt(input1.value);
+	let input2 = document.getElementById('2');
+	let input22 = parseInt(input2.value);
+	let input3 = document.getElementById('3');
+	let input32 = parseInt(input3.value);
+	let input4 = document.getElementById('4');
+	let input42 = parseInt(input4.value);
+	let input5 = document.getElementById('5');
+	let input52 = parseInt(input5.value);
+	let list = [input12, input22, input32, input42, input52];
+	let list2 = list.sort((a,b)=>a-b)
+	alert(list2);
+}
+</script>
+</html>
