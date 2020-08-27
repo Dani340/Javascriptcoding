@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>age calculator</title>
+</head>
+<body>
+<script>
+function calculate() {
+	let day = document.getElementById('day');
+	let day1 = parseInt(day.value);
+	let month = document.getElementById('month');
+	let month1 = parseInt(month.value);
+	let year = document.getElementById('year');
+	let year1 = parseInt(year.value);
+	let date = new Date();
+	let daytoday = date.getDate();
+	let monthtoday = date.getMonth();
+	let yeartoday = date.getFullYear();
+	let monthtoday1 = monthtoday + 1
+	let yeartotal = 0;
+	let monthtotal = 0;
+	let daytotal = 0;
+	if(yeartoday < year1) {
+		alert("You have inserted dates incorectly!")
+	}
+	else if(yeartoday > year1) {
+		yeartotal += yeartoday - year1;
+	}
+	if(monthtoday1 > month1) {
+		monthtotal += (monthtoday1 - month1);
+	}
+	else if(month1 > monthtoday1) {
+		monthtotal += 12 - (month1 - monthtoday1);
+	}
+	if(daytoday > day1) {
+		daytotal += (daytoday - day1);
+	}
+	else if(day1 > daytoday) {
+		daytotal += 30 - (day1 - daytoday);
+	}
+	alert('You are ' + daytotal + " days, " + monthtotal + ' months and ' + yeartotal + ' years!');
+}
+</script>
+</body>
+Day - <input type="number" id="day">
+Month - <input type="number" id="month">
+Year - <input type="number" id="year">
+<button onclick='calculate()'>Calculate your age</button>
+</html>
