@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text coding</title>
+</head>
+<body>
+<script>
+function calculate() {
+	let word = document.getElementById('code');
+	let word1 = word.value;
+	let result = ''
+	let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+	for(var i = 0; i < word1.length; i++) {
+		let position = letters.indexOf(word1[i]);
+		if(position === 0) {
+			position = 25;
+		}
+		else if(position === 25) {
+			position = 1;
+		}
+		else if(position === 24) {
+			position = 0;
+		}
+		else if(position === 4 || position === 8 || position === 14 || position === 20) {
+			position -= 1;
+		}
+		else {
+			position += 2;
+		}
+		result += letters[position];
+	}
+	alert(result);
+}
+</script> 
+</body>
+The word - <input type="name" id="code">
+<button onclick='calculate()'>Code your text</button>
+</html>
