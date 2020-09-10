@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>email adress</title>
+</head>
+<body>
+<input type="text" id="email">
+<button onclick="emailAd()">Check adress</button>
+</body>
+<script>
+function emailAd() {
+	let ro = '.ro';
+	let ru = '.ru';
+	let com = '.com';
+	let org = '.org';
+	let net = '.net';
+	const emailad = document.getElementById('email');
+	let email1 = emailad.value;
+	if(email1.includes('@') && email1.charAt(0) != '@' && email1.charAt(email1.length-1) != '@' && email1.charAt(email1.length-4) != '@' && email1.charAt(email1.length-5) != '@' && email1.endsWith(ro) || email1.endsWith(ru) || email1.endsWith(com) || email1.endsWith(org) || email1.endsWith(net)){
+		alert("It's valid!");
+	}
+	else {
+		alert("It's not valid!")
+	}
+
+}
+</script>
+</html>
