@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>phone no checker V2.0</title>
+</head>
+<body>
+</body>
+<script>
+function number() {
+	const number = document.getElementById('phone');
+	firstnumber = number.value.charAt(0);
+	secondnumber = number.value.charAt(1);
+	thirdnumber = number.value.charAt(2);
+	if(number.value.length === 10 && firstnumber === '0' && secondnumber === '7' && thirdnumber === '3' || thirdnumber === '4' || thirdnumber === '5' || thirdnumber === '2') {
+		alert("Number accepted!");
+	}
+	else {
+		alert("Number doesn't fit the norms, change it!");
+	}
+}
+function preFix() {
+	const prefix = document.getElementById("pref");
+	let prefix1 = parseInt(prefix.value);
+	if(prefix1 === 40) {
+		alert("It's a romanian phone number!")
+	}
+	else if(prefix1 === 7) {
+		alert("It's a russian phone number!")
+	}
+	else if(prefix1 === 1) {
+		alert("It's an american phone number!")
+	}
+	else if(prefix1 === 44) {
+		alert("It's a british phone number!")
+	}
+	else {
+		alert("Didn't recognize the country!")
+	}
+}
+</script>
+Your phone number - <input type="number" id="phone">
+<button onclick='number()'>Check phone number</button>
+Your phone number prefix - <input type="number" id="pref">
+<button onclick='preFix()'>Check the country</button>
+</html>
